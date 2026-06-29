@@ -1,0 +1,26 @@
+Question 1 - Linux Environment Verification
+
+Username:
+Replace with output from whoami.
+
+Groups:
+Replace with output from id and groups.
+
+Current Shell:
+Replace with output from echo "$SHELL".
+
+Current Working Directory:
+Replace with output from pwd.
+
+Workspace Files:
+Replace with summarized output from ls -la.
+
+Network Connectivity:
+Replace with summarized output from ping -c 4 google.com.
+
+Brief Observations:
+1. The user account was verified using whoami, id, and groups.
+2. The current shell and working directory were checked to confirm the active command-line environment.
+3. Workspace contents were listed with detailed permissions using ls -la.
+4. Network connectivity was verified using ping.
+

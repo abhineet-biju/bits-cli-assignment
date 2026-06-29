@@ -1,0 +1,23 @@
+Question 5 - Storage Health Assessment and Documentation
+
+Available Storage Devices:
+Replace with summary from lsblk.
+
+Mounted File Systems:
+Replace with summary from df -h and mount output.
+
+Disk Usage Statistics:
+Replace with key values from df -h.
+
+Inode Utilization:
+Replace with key values from df -i.
+
+Storage Health Observations:
+Replace with smartctl output if available. If smartctl is not installed or permission is denied, mention that direct SMART health information could not be collected in the lab environment.
+
+Recommendations:
+1. Monitor disk usage regularly using df -h.
+2. Monitor inode usage using df -i, especially on systems that create many small files.
+3. Remove unnecessary temporary files and old logs to keep storage available.
+4. Use disk health tools such as smartctl when supported by the system and permitted by administrator privileges.
+

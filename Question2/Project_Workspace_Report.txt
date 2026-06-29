@@ -1,0 +1,22 @@
+Question 2 - Secure Project Workspace Setup
+
+Directory Structure Created:
+project_workspace/
+  plan.txt
+  notes.txt
+
+Permissions Before Modification:
+Replace with output from ls -ld project_workspace before chmod.
+
+Permissions After Modification:
+Replace with output from ls -ld project_workspace after chmod 750.
+
+Ownership Details:
+Replace with output from id and ls -ld project_workspace.
+
+Umask Value:
+Replace with output from umask.
+
+Explanation:
+The project workspace was created to store project files in a controlled directory. The permission mode 750 allows the owner to read, write, and enter the directory; allows the group to read and enter it; and blocks all access for other users. This protects project data by limiting access to authorized users only.
+

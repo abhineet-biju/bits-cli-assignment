@@ -1,0 +1,22 @@
+Question 3 - File System and Link Analysis
+
+Files Created:
+original.txt
+hardlink.txt
+symlink.txt
+
+Inode Numbers:
+Replace with output from ls -li.
+
+Metadata:
+Replace with key output from stat original.txt, stat hardlink.txt, and stat symlink.txt.
+
+Hard Link Behavior:
+The hard link uses the same inode as the original file. After deleting the original filename, the hard link still works because the file data remains connected to the inode through another directory entry.
+
+Symbolic Link Behavior:
+The symbolic link has a different inode and stores a reference to the original path. After deleting the original file, the symbolic link becomes broken because its target path no longer exists.
+
+Conclusion:
+Hard links are useful when multiple filenames should refer to the same file data. Symbolic links are useful as shortcuts to paths, but they depend on the target path remaining valid.
+

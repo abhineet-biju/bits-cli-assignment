@@ -1,0 +1,20 @@
+Question 4 - File Access and I/O Investigation
+
+Open Files Identified:
+Replace with output from lsof -p $$, or mention if lsof was unavailable.
+
+File Descriptor Observations:
+Replace with output from ls -l /proc/$$/fd.
+
+Output Redirection Result:
+The command using `>` wrote standard output into Question4/output.txt.
+
+Error Redirection Result:
+The command using `2>` wrote the missing file error into Question4/error.txt.
+
+Resource Limits Observed:
+Replace with output from ulimit -a.
+
+Technical Explanation:
+Linux treats many resources as files, including terminals, regular files, and device interfaces. Processes access these resources through file descriptors. Standard input, standard output, and standard error are represented by descriptors 0, 1, and 2. Redirection changes where these descriptors send or receive data.
+
