@@ -1,0 +1,29 @@
+Question 2 - Secure Project Workspace Setup
+
+Command: mkdir -p project_workspace
+
+Command: touch project_workspace/plan.txt project_workspace/notes.txt
+
+Command: ls -l project_workspace
+total 0
+-rw-r--r-- 1 root root 0 Jun 22 21:32 notes.txt
+-rw-r--r-- 1 root root 0 Jun 22 21:32 plan.txt
+
+Command: ls -ld project_workspace
+drwxr-xr-x 2 root root 4096 Jun 22 21:32 project_workspace
+
+Command: chmod 750 project_workspace
+
+Command: ls -ld project_workspace
+drwxr-x--- 2 root root 4096 Jun 22 21:32 project_workspace
+
+Command: id
+uid=0(root) gid=0(root) groups=0(root)
+
+Command: umask
+0022
+
+Command: find project_workspace -maxdepth 2 -ls
+  3966710      4 drwxr-x---   2 root     root         4096 Jun 22 21:32 project_workspace
+  3966738      0 -rw-r--r--   1 root     root            0 Jun 22 21:32 project_workspace/notes.txt
+  3966737      0 -rw-r--r--   1 root     root            0 Jun 22 21:32 project_workspace/plan.txt

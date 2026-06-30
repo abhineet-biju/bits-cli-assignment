@@ -6,17 +6,16 @@ project_workspace/
   notes.txt
 
 Permissions Before Modification:
-Replace with output from ls -ld project_workspace before chmod.
+drwxr-xr-x 2 root root 4096 Jun 22 21:32 project_workspace
 
 Permissions After Modification:
-Replace with output from ls -ld project_workspace after chmod 750.
+drwxr-x--- 2 root root 4096 Jun 22 21:32 project_workspace
 
 Ownership Details:
-Replace with output from id and ls -ld project_workspace.
+The directory and files were owned by root. The id command showed uid=0(root) gid=0(root) groups=0(root).
 
-Umask Value:
-Replace with output from umask.
+Umask Value Used:
+0022
 
 Explanation:
-The project workspace was created to store project files in a controlled directory. The permission mode 750 allows the owner to read, write, and enter the directory; allows the group to read and enter it; and blocks all access for other users. This protects project data by limiting access to authorized users only.
-
+The workspace was first created with default directory permissions. Then chmod 750 was applied so the owner had full access, the group had read and execute access, and other users had no access. This protects project data because unauthorized users cannot enter or read the project directory.

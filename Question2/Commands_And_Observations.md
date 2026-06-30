@@ -1,82 +1,131 @@
-# Question 2 - Commands And Observations
+# Question 2 - Commands, Outputs, and Observations
 
-## 1. `mkdir -p project_workspace`
+## Command 1
+
+```bash
+mkdir -p project_workspace
+```
 
 Output:
 
 ```text
-No output means the directory was created successfully.
+No output
 ```
 
-Observation: This command creates the secure project directory. The `-p` option avoids an error if the directory already exists.
+Observation: This command created the project workspace directory. There was no error, so the directory was created successfully.
 
-## 2. `touch project_workspace/plan.txt project_workspace/notes.txt`
+## Command 2
+
+```bash
+touch project_workspace/plan.txt project_workspace/notes.txt
+```
 
 Output:
 
 ```text
-No output means the files were created successfully.
+No output
 ```
 
-Observation: The `touch` command creates empty documentation files inside the workspace. These files represent project planning and notes documents.
+Observation: This command created two empty project files. These files were used as sample documentation files in the secure workspace.
 
-## 3. `ls -l project_workspace`
+## Command 3
+
+```bash
+ls -l project_workspace
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+total 0
+-rw-r--r-- 1 root root 0 Jun 22 21:32 notes.txt
+-rw-r--r-- 1 root root 0 Jun 22 21:32 plan.txt
 ```
 
-Observation: This command displays the permissions, owner, group, size, and modification time of files in the workspace. It shows the default permissions before directory permission changes are evaluated.
+Observation: This command displayed the files inside the workspace. The output shows plan.txt and notes.txt with their default file permissions.
 
-## 4. `ls -ld project_workspace`
+## Command 4
+
+```bash
+ls -ld project_workspace
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output before chmod.
+drwxr-xr-x 2 root root 4096 Jun 22 21:32 project_workspace
 ```
 
-Observation: This command shows the permissions and ownership of the directory itself. It is used to compare the directory permissions before and after applying `chmod`.
+Observation: This command displayed the directory permissions before modification. The original permissions allowed access for owner, group, and others.
 
-## 5. `chmod 750 project_workspace`
+## Command 5
+
+```bash
+chmod 750 project_workspace
+```
 
 Output:
 
 ```text
-No output means the permission change was successful.
+No output
 ```
 
-Observation: This command gives full access to the owner, read and execute access to the group, and no access to others. It protects project files from unauthorized users.
+Observation: This command changed the workspace permission to 750. This gives full access to the owner, limited access to the group, and no access to others.
 
-## 6. `ls -ld project_workspace`
+## Command 6
+
+```bash
+ls -ld project_workspace
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output after chmod.
+drwxr-x--- 2 root root 4096 Jun 22 21:32 project_workspace
 ```
 
-Observation: The updated directory listing should show permissions similar to `drwxr-x---`. This confirms that the workspace permissions were changed successfully.
+Observation: This command confirmed the changed permission. The output shows drwxr-x---, which means others cannot access the directory.
 
-## 7. `id`
+## Command 7
+
+```bash
+id
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+uid=0(root) gid=0(root) groups=0(root)
 ```
 
-Observation: The `id` command shows ownership identity information, including UID and group memberships. It helps explain who owns and can access the workspace.
+Observation: This command displayed ownership identity information. The output shows the UID, GID, and group details of the user.
 
-## 8. `umask`
+## Command 8
+
+```bash
+umask
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+0022
 ```
 
-Observation: The `umask` command shows the default permission mask used when new files and directories are created. It helps explain why newly created files do not receive full permissions by default.
+Observation: This command displayed the default permission mask. The output 0022 explains why new files are not created with write permission for group and others.
 
+## Command 9
+
+```bash
+find project_workspace -maxdepth 2 -ls
+```
+
+Output:
+
+```text
+3966710      4 drwxr-x---   2 root     root         4096 Jun 22 21:32 project_workspace
+  3966738      0 -rw-r--r--   1 root     root            0 Jun 22 21:32 project_workspace/notes.txt
+  3966737      0 -rw-r--r--   1 root     root            0 Jun 22 21:32 project_workspace/plan.txt
+```
+
+Observation: This command displayed the workspace structure with permissions and ownership. It confirmed the created directory and files.

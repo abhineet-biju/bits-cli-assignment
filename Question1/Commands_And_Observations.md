@@ -1,72 +1,116 @@
-# Question 1 - Commands And Observations
+# Question 1 - Commands, Outputs, and Observations
 
-## 1. `whoami`
+## Command 1
+
+```bash
+whoami
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+root
 ```
 
-Observation: The `whoami` command displays the current logged-in username. This confirms which user account is being used in the Linux environment.
+Observation: This command shows the current logged-in user. The output shows that I was logged in as root in the Linux environment.
 
-## 2. `id`
+## Command 2
+
+```bash
+id
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+uid=0(root) gid=0(root) groups=0(root)
 ```
 
-Observation: The `id` command shows the user ID, group ID, and all groups associated with the account. This helps verify account permissions and group membership.
+Observation: This command displays the user ID, group ID, and group membership. The output confirms that the current user belongs to the root group.
 
-## 3. `groups`
+## Command 3
+
+```bash
+groups
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+root
 ```
 
-Observation: The `groups` command lists the groups assigned to the current user. These groups help decide what files and system resources the user can access.
+Observation: This command lists the groups of the current user. The output shows root as the active group.
 
-## 4. `echo "$SHELL"`
+## Command 4
+
+```bash
+echo "$SHELL"
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+/bin/bash
 ```
 
-Observation: This command prints the current shell path. The output helps confirm which command interpreter is being used.
+Observation: This command prints the current shell. The output shows that the shell used was /bin/bash.
 
-## 5. `pwd`
+## Command 5
+
+```bash
+pwd
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+/work
 ```
 
-Observation: The `pwd` command prints the present working directory. It confirms the exact directory from which the lab commands are being executed.
+Observation: This command prints the present working directory. The output shows that the commands were executed from /work.
 
-## 6. `ls -la`
+## Command 6
+
+```bash
+ls -la
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+total 36
+drwxr-xr-x 8  501 root 4096 Jun 22 21:31 .
+drwxr-xr-x 1 root root 4096 Jun 22 21:26 ..
+drwxr-xr-x 7  501 root 4096 Jun 22 21:23 .git
+drwxr-xr-x 3  501 root 4096 Jun 22 21:25 Question1
+drwxr-xr-x 3  501 root 4096 Jun 22 21:26 Question2
+drwxr-xr-x 4  501 root 4096 Jun 22 21:26 Question3
+drwxr-xr-x 3  501 root 4096 Jun 22 21:26 Question4
+drwxr-xr-x 3  501 root 4096 Jun 22 21:26 Question5
+-rw-r--r-- 1  501 root 1517 Jun 22 21:23 README.md
 ```
 
-Observation: The `ls -la` command lists all visible and hidden files with detailed permissions, owner, group, size, and timestamps. This verifies the files and directories available in the workspace.
+Observation: This command lists all files and directories with detailed information. The output shows the question folders and project files in the workspace.
 
-## 7. `ping -c 4 google.com`
+## Command 7
+
+```bash
+ping -c 4 google.com
+```
 
 Output:
 
 ```text
-Replace this with your Coursera Lab output.
+PING google.com (142.251.220.110) 56(84) bytes of data.
+64 bytes from 142.251.220.110: icmp_seq=1 ttl=63 time=0.072 ms
+64 bytes from 142.251.220.110: icmp_seq=2 ttl=63 time=0.442 ms
+64 bytes from 142.251.220.110: icmp_seq=3 ttl=63 time=0.657 ms
+64 bytes from 142.251.220.110: icmp_seq=4 ttl=63 time=0.569 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3061ms
+rtt min/avg/max/mdev = 0.072/0.435/0.657/0.223 ms
 ```
 
-Observation: The `ping` command checks network connectivity by sending packets to `google.com`. Successful replies show that the lab environment has working network access.
-
+Observation: This command checks network connectivity. The output shows 4 packets transmitted and 4 received, so the network connection was working.

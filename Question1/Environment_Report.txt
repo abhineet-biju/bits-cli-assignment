@@ -1,26 +1,23 @@
 Question 1 - Linux Environment Verification
 
 Username:
-Replace with output from whoami.
+root
 
 Groups:
-Replace with output from id and groups.
+uid=0(root) gid=0(root) groups=0(root)
+root
 
 Current Shell:
-Replace with output from echo "$SHELL".
+/bin/bash
 
 Current Working Directory:
-Replace with output from pwd.
+/work
 
 Workspace Files:
-Replace with summarized output from ls -la.
+The workspace contained README.md and the five folders Question1, Question2, Question3, Question4, and Question5. The ls -la command displayed detailed permissions, ownership, size, and timestamps.
 
 Network Connectivity:
-Replace with summarized output from ping -c 4 google.com.
+The ping command to google.com transmitted 4 packets and received 4 packets with 0% packet loss. This confirmed that network connectivity was working.
 
 Brief Observations:
-1. The user account was verified using whoami, id, and groups.
-2. The current shell and working directory were checked to confirm the active command-line environment.
-3. Workspace contents were listed with detailed permissions using ls -la.
-4. Network connectivity was verified using ping.
-
+I verified the current Linux user using whoami, id, and groups. I checked the shell and working directory using echo "$SHELL" and pwd. I listed the workspace contents using ls -la and verified network connectivity using ping.

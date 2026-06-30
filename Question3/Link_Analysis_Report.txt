@@ -6,17 +6,16 @@ hardlink.txt
 symlink.txt
 
 Inode Numbers:
-Replace with output from ls -li.
+The original file and hardlink.txt used inode 3966750. The symbolic link symlink.txt used inode 3966752.
 
-Metadata:
-Replace with key output from stat original.txt, stat hardlink.txt, and stat symlink.txt.
+Metadata Collected:
+The stat command showed that original.txt and hardlink.txt were regular files with the same inode and link count 2 before deletion. The symbolic link had its own inode and pointed to original.txt.
 
-Hard Link Behavior:
-The hard link uses the same inode as the original file. After deleting the original filename, the hard link still works because the file data remains connected to the inode through another directory entry.
+Hard Link Comparison:
+A hard link is another filename for the same inode. After deleting original.txt, hardlink.txt still displayed the file content correctly.
 
-Symbolic Link Behavior:
-The symbolic link has a different inode and stores a reference to the original path. After deleting the original file, the symbolic link becomes broken because its target path no longer exists.
+Symbolic Link Comparison:
+A symbolic link stores a path to another file. After deleting original.txt, symlink.txt became broken and cat symlink.txt returned an error.
 
 Conclusion:
-Hard links are useful when multiple filenames should refer to the same file data. Symbolic links are useful as shortcuts to paths, but they depend on the target path remaining valid.
-
+Hard links remain usable after the original filename is removed because the inode still exists through the hard link. Symbolic links depend on the target path, so they fail when the target file is deleted.
