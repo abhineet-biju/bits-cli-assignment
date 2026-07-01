@@ -1,0 +1,11 @@
+Project Notes
+
+The project_workspace directory was created for storing project files securely.
+The files plan.txt and notes.txt were created using the touch command.
+
+The directory permission was changed to 750:
+- Owner has read, write, and execute permission.
+- Group has read and execute permission.
+- Others have no permission.
+
+This protects the project data from unauthorized access.
