@@ -1,6 +1,6 @@
 Question 2 - Secure Project Workspace Setup
 
-Directory Structure Created:
+Directory Structure:
 project_workspace/
   plan.txt
   notes.txt
@@ -8,10 +8,10 @@ project_workspace/
 Files Created:
 plan.txt contains the project setup plan. notes.txt contains notes explaining the workspace permissions and how they protect project data.
 
-Permissions Before Modification:
+Permissions Before Changes:
 drwxr-xr-x 2 root root 4096 Jun 22 21:32 project_workspace
 
-Permissions After Modification:
+Permissions After Changes:
 drwxr-x--- 2 root root 4096 Jun 22 21:32 project_workspace
 
 Ownership Details:
@@ -20,5 +20,5 @@ The directory and files were owned by root. The id command showed uid=0(root) gi
 Umask Value Used:
 0022
 
-Explanation:
-The workspace was first created with default directory permissions. Then chmod 750 was applied so the owner had full access, the group had read and execute access, and other users had no access. This protects project data because unauthorized users cannot enter or read the project directory.
+Reasoning:
+The workspace was created with default directory permissions first. Then chmod 750 was applied so the owner had full access, the group had read and execute access, and other users had no access. This protects project data because unauthorized users cannot enter or read the project directory.

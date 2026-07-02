@@ -1,5 +1,5 @@
-# Bits-Project-
+# Bits-Project
 
 Graded Lab Assignment: Modules 1-4
 
-This repository contains my completed Linux command line lab assignment. It has five folders, one for each question. Each folder contains the commands executed, command outputs, screenshots, created files, and the required report.
+This repository holds my completed Linux command-line lab for Modules 1-4. It is organized into five folders, one per question. Each folder includes the commands I ran, their outputs, supporting screenshots, generated files, and the required report.

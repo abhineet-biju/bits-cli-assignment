@@ -16,4 +16,4 @@ Storage Health Observations:
 smartctl was installed at /usr/sbin/smartctl. The command smartctl -H /dev/sda failed because /dev/sda did not exist in this environment. Because of this, SMART health could not be collected for /dev/sda. Disk usage and inode usage were still checked using df and lsblk.
 
 Recommendations:
-Disk usage should be monitored regularly using df -h. Inode usage should be checked using df -i, especially on systems that create many small files. Old temporary files and logs should be removed when storage usage increases. SMART checks should be run on the correct physical disk device when available.
+Monitor disk usage regularly using df -h. Check inode usage with df -i, especially on systems that create many small files. Remove old temporary files and logs when storage usage increases. Run SMART checks on the correct physical disk device when available.

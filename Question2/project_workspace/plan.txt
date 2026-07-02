@@ -1,6 +1,6 @@
 Project Plan
 
-1. Create a secure project workspace.
+1. Set up a protected project workspace.
 2. Create project documentation files.
 3. Check the default file and directory permissions.
 4. Change the workspace directory permission using chmod 750.
