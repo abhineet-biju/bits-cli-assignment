@@ -193,3 +193,5 @@ cat: symlink.txt: No such file or directory
 ```
 
 Observation: This command failed after deleting the original file. It showed that symbolic links depend on the target path.
+
+Final note: The submitted `symlink.txt` file is intentionally broken because the experiment required deleting `original.txt` and observing the result. The submitted `hardlink.txt` remains readable, which proves the difference between hard links and symbolic links.

@@ -5,6 +5,9 @@ project_workspace/
   plan.txt
   notes.txt
 
+Files Created:
+plan.txt contains the project setup plan. notes.txt contains notes explaining the workspace permissions and how they protect project data.
+
 Permissions Before Modification:
 drwxr-xr-x 2 root root 4096 Jun 22 21:32 project_workspace
 
